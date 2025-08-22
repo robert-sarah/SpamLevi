@@ -1,0 +1,31 @@
+# SpamLevi Targets File Example
+# Format: phone_number,message,count,delay
+# Lines starting with # are comments and will be ignored
+
+# Example 1: Basic target
++1234567890,Hello World!,10,1.0
+
+# Example 2: With special characters (use quotes for commas in message)
++1987654321,"Hello, how are you?",5,2.5
+
+# Example 3: Multiple messages
++1122334455,This is a test message,3,1.5
++1555666777,Another test message,7,0.8
+
+# Example 4: Long message
++1444555666,This is a longer message that demonstrates how to handle messages with more content. The message can contain up to 4096 characters.,15,2.0
+
+# Example 5: Unicode support
++1666777888,مرحبا بالعالم! Hello World! 你好世界!,8,1.2
+
+# Invalid examples (will be skipped):
+# Missing fields: +1234567890,Hello
+# Invalid phone: 1234567890,Test,5,1.0
+# Invalid count: +1234567890,Test,abc,1.0
+# Invalid delay: +1234567890,Test,5,abc
+
+# Notes:
+# - Phone numbers must start with '+' and country code
+# - Count must be a positive integer
+# - Delay must be a positive float (seconds)
+# - Empty lines and comments are ignored
